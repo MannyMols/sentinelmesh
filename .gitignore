@@ -7,3 +7,5 @@ venv/
 *.pkl
 .DS_Store
 data/TON_IoT/
+*.bak
+data/processed/phase1_cic_sampled.csv
