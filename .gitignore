@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+data/raw/
+venv/
+.ipynb_checkpoints/
+*.pkl
+.DS_Store
+data/TON_IoT/

@@ -1,0 +1,4 @@
+model_name,cic_f1,ton_f1,precision,recall,delta_abs,delta_rel_pct,champion
+RandomForest,0.9408,0.6605,0.5823,0.7631,0.2803,29.79,False
+XGBoost,0.9446,0.6605,0.5823,0.7631,0.2841,30.07,True
+LightGBM,0.9438,0.6605,0.5823,0.7631,0.2833,30.01,False

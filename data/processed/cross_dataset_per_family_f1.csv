@@ -1,0 +1,11 @@
+attack_type,n_samples,f1_score,accuracy
+normal,50000,0.0,0.0
+backdoor,20000,1.0,1.0
+ddos,20000,1.0,1.0
+dos,20000,1.0,1.0
+injection,20000,1.0,1.0
+mitm,1043,1.0,1.0
+password,20000,1.0,1.0
+ransomware,20000,1.0,1.0
+scanning,20000,1.0,1.0
+xss,20000,1.0,1.0

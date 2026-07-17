@@ -1,0 +1,4 @@
+model_name,model_version,scored_at,total_rows,weighted_f1,weighted_prec,weighted_rec,cic_f1,ton_f1,champion
+RandomForest,1.0,2026-07-17,452570,0.8392,0.8458,0.8656,0.958,0.6605,False
+XGBoost,1.0,2026-07-17,452570,0.8293,0.8483,0.8643,0.952,0.6605,True
+LightGBM,1.0,2026-07-17,452570,0.8258,0.8424,0.8617,0.9469,0.6605,False
