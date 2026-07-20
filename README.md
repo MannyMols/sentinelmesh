@@ -6,11 +6,17 @@ Cross-dataset ML transferability evaluation for IoT network intrusion detection.
 Trains ensemble models (RandomForest, XGBoost, LightGBM) on CICIoT2023, evaluates zero-shot and few-shot transfer to TON_IoT, and writes results to PostgreSQL.
 
 ## Structure
-- `notebooks/` — Jupyter notebooks 00–05 covering schema setup, EDA, model training, ETL, prediction writeback, and cross-dataset evaluation
+- `notebooks/` — Jupyter notebooks 00–05 covering the full ML pipeline:
+  - `00_schema_setup.ipynb` — PostgreSQL schema initialisation and table creation
+  - `01_data_exploration.ipynb` — EDA: class distributions, feature correlation, and anomaly analysis
+  - `02_model_training.ipynb` — Ensemble model training (RandomForest, XGBoost, LightGBM) on CICIoT2023
+  - `03_ton_iot_etl.ipynb` — ETL pipeline for TON_IoT dataset ingestion and DB connection utilities
+  - `04_prediction_writeback.ipynb` — Model prediction writeback to PostgreSQL with F1 scoring
+  - `05_cross_dataset_eval.ipynb` — Cross-dataset evaluation: zero-shot and few-shot transfer to TON_IoT, with learning curve plots and ratio sweep
 - `etl/` — data ingestion and DB connection utilities
 - `sql/` — schema DDL and fact/dimension transforms
 - `dashboard/` — results visualization app
-- `data/processed/` — summary CSVs and evaluation outputs
+- `data/processed/` — summary CSVs and evaluation outputs, including few-shot learning curve plots (`fewshot_learning_curve.png`, `fewshot_learning_curve_with_ci.png`) and ratio sweep results (`fewshot_ratio_sweep.csv`)
 
 ## Key Finding
 Models trained on CICIoT2023 show a ~30% relative F1 drop when evaluated zero-shot on TON_IoT, but few-shot adaptation with just 10% TON_IoT training data recovers benign-class F1 from 0.00 to 0.90.
